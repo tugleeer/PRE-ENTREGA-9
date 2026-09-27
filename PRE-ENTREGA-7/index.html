@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Simulador de Edades</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+    <main class="contenedor">
+        <header class="encabezado">
+            <p class="etiqueta">Mi simulador</p>
+            <h1>Personas y edades</h1>
+            <p class="introduccion">Agrega personas y consulta sus edades aproximadas.</p>
+        </header>
+
+        <p id="aviso-temporizado" class="aviso" aria-live="polite"></p>
+
+        <section class="panel">
+            <h2>Agregar una persona</h2>
+
+            <form id="formulario-persona">
+                <div class="campos">
+                    <label>
+                        Nombre
+                        <input type="text" id="nombre" placeholder="Ej: Alex" required>
+                    </label>
+
+                    <label>
+                        Año de nacimiento
+                        <input
+                            type="number"
+                            id="año-nacimiento"
+                            placeholder="Ej: 2000"
+                            required
+                        >
+                    </label>
+
+                    <label>
+                        Relación
+                        <input type="text" id="relacion" placeholder="Ej: Amigo/a" required>
+                    </label>
+                </div>
+
+                <button type="submit" id="boton-agregar" class="boton-agregar">
+                    Agregar persona
+                </button>
+            </form>
+
+            <p id="mensaje" class="mensaje" aria-live="polite"></p>
+        </section>
+
+        <section class="panel">
+            <div class="titulo-lista">
+                <div>
+                    <h2>Lista de personas</h2>
+                    <p>Los datos se conservan al recargar la página.</p>
+                </div>
+
+                <input
+                    type="search"
+                    id="busqueda"
+                    class="busqueda"
+                    placeholder="Buscar por nombre..."
+                    aria-label="Buscar persona por nombre"
+                >
+            </div>
+
+            <button type="button" id="vaciar-lista" class="boton-vaciar">
+                Vaciar lista
+            </button>
+
+            <div id="lista-personas" class="lista-personas"></div>
+        </section>
+    </main>
+</body>
+</html>
